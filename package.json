@@ -30,7 +30,7 @@
   },
   "scripts": {
     "prepublish": "npm run compile",
-    "copy": "cp -rf src dist",
+    "copy": "rm -fr dist && cp -rf src dist",
     "compile": "npm run copy && node_modules/.bin/babel dist -d dist"
   }
 }
