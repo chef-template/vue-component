@@ -1,6 +1,6 @@
 {
   "name": "chef-template",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/vue-tools/chef-template"
@@ -64,7 +64,9 @@
   },
   "scripts": {
     "prepublish": "npm run compile",
+    "codecov": "./node_modules/.bin/codecov",
     "copy": "rm -fr dist && cp -rf src dist",
-    "compile": "npm run copy && node_modules/.bin/babel dist -d dist"
+    "compile": "npm run copy && node_modules/.bin/babel dist -d dist",
+    "test": "cross-env BABEL_ENV=test ./node_modules/karma/bin/karma start ./tests/karma.conf.js"
   }
 }
