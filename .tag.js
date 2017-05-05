@@ -14,6 +14,14 @@ switch (action) {
     case 'add:remote':
         addRemoteTag(version)
         break
+        
+    case 'delete:local':
+        deleteLocalTag(version)
+        break
+
+    case 'delete:remote':
+        deleteRemoteTag(version)
+        break
 
     default:
         addLocalTag(version)
