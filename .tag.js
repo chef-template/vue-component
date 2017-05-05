@@ -33,7 +33,7 @@ switch (action) {
 }
 
 function addLocalTag(tag) {
-    let local = spawnSync('git', ['tag', '-a', tag, '-v', message])
+    let local = spawnSync('git', ['tag', '-a', tag, '-m', message])
     logInfo(local.stdout.toString())
     logErr(local.stderr.toString())
 }
