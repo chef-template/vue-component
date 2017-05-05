@@ -1,6 +1,6 @@
 {
   "name": "chef-template",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/vue-tools/chef-template"
@@ -73,6 +73,6 @@
     "compile": "npm run copy && node_modules/.bin/babel dist -d dist",
     "test": "cross-env BABEL_ENV=test ./node_modules/karma/bin/karma start ./tests/karma.conf.js",
     "tag": "node .tag",
-    "tag:remote": "node .tag add:remote"
+    "tag:delete": "git tag -d $1 && git push origin --delete tag $1"
   }
 }
